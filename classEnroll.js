@@ -30,15 +30,15 @@ exports.classEnroll = function (req, res) {
             content += '<body><style></style><div class="row"> <div class="col-md-3"></div><div class="col-md-6"><center><h1>'+information[0]+' class</h1><br><br><table class="table table-bordered"><thead><tr><th>NAME</th><th>EMAIL</th><th>COURSE & YEAR</th></tr></thead><tbody>';
             information.splice(information.lastIndexOf(""), 1)
             var len = information.length;
-            var count = 0;
-            console.log(information)
-            for (var i = 0; i < len / 3; i++) {
+            var count = 1;
+            console.log(information[0])
+            for (var i = 1; i < len / 3; i++) {
                 content += '<tr>'
                 for (let j = count; j < count + 3; j++) {
                     content += '<td>' + information[j] + '</td>';
                 }
                 content += '</tr>'
-                count += 3;
+                count += 4;
             };
 
             content += '</table></center></div><div class="col-md-3"></div> </div></body></html>';
